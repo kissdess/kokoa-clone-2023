@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends - Kokoa Clone</title>
+
+    <script src="https://kit.fontawesome.com/19e791f94b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="status-bar">
+        <!-- rest of the HTML code goes here -->
+    </div>
+
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="btn">
+                <a class="nav__link1" href="friends.html">
+                    <i class="fa-solid fa-user fa-2x"></i>
+                </a>
+            </li>
+            <li class="btn">
+                <a class="nav__link2" href="#">
+                    <span class="nav__notification">1</span>
+                    <i class="fa-regular fa-comment fa-2x"></i>
+                </a>
+            </li>
+            <li class="btn">
+                <a class="nav__link3" href="#">
+                    <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+                </a>
+            </li>
+            <li class="btn">
+                <a class="nav__link4" href="#">
+                    <span class="nav__more"></span>
+                    <i class="fa-solid fa-ellipsis fa-2x"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        const link = document.querySelector('.nav__link');
+        const notification = document.querySelector('.nav__notification');
+        let count = 1;
+        link.addEventListener('click', () => {
+          count++;
+          notification.innerText = count;
+        });
+    </script>
+</body>
+</html>
